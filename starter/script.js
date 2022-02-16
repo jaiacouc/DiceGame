@@ -1,4 +1,6 @@
 'use strict';
+//TODO: Add in a blackjack style of game play for the winning terms.
+// Add in more comments
 
 // Selecting elements
 const score0El = document.getElementById('score--0');
@@ -63,6 +65,7 @@ btnHold.addEventListener('click', function () {
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
     } else {
+      document.getElementById(`current--${activePlayer}`).textContent = 0;
       activePlayer = activePlayer === 0 ? 1 : 0;
       player0.classList.toggle('player--active');
       player1.classList.toggle('player--active');
